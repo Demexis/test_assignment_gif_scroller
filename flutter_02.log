@@ -1,0 +1,74 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --device-id=emulator-5554 --profile --dart-define=flutter.inspector.structuredErrors=true lib\main.dart
+
+## exception
+
+String: failed to connect to http://127.0.0.1:52799/4bKLRLvcb2E=/
+
+```
+#0      DartDevelopmentServiceImpl.startService (package:dds/src/dds_impl.dart:136:7)
+<asynchronous suspension>
+#1      DartDevelopmentService.startDartDevelopmentService (package:dds/dds.dart:97:5)
+<asynchronous suspension>
+#2      DartDevelopmentService.startDartDevelopmentService (package:flutter_tools/src/base/dds.dart:55:22)
+<asynchronous suspension>
+#3      FlutterDevice.connect.<anonymous closure> (package:flutter_tools/src/resident_runner.dart:297:11)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel stable, 3.16.4, on Microsoft Windows [Version 10.0.19045.3324], locale ru-RU)
+    • Flutter version 3.16.4 on channel stable at C:\src\flutter
+    ! The flutter binary is not on your path. Consider adding C:\src\flutter\bin to your path.
+    ! The dart binary is not on your path. Consider adding C:\src\flutter\bin to your path.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 2e9cb0aa71 (8 days ago), 2023-12-11 14:35:13 -0700
+    • Engine revision 54a7145303
+    • Dart version 3.2.3
+    • DevTools version 2.28.4
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\Demexis\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.6.4)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.6.33815.320
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2023.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.7+0-b2043.56-10550314)
+
+[✓] Connected device (4 available)
+    • sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 14 (API 34) (emulator)
+    • Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.19045.3324]
+    • Chrome (web)                 • chrome        • web-javascript • Google Chrome 120.0.6099.110
+    • Edge (web)                   • edge          • web-javascript • Microsoft Edge 120.0.2210.77
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.
+```
